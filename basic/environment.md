@@ -96,11 +96,7 @@ Your shell is [`bash`](https://www.gnu.org/s/bash).
 
 Please note that:
 
-* The `esc26-bastion` host is useful and needed only as a gateway to
-  `esc`. Don't execute heavy programs on it.
-* Each `esc` computer is not assigned exclusively to a student.
-* Your home directory is shared between all `esc` computers, including
-  the `esc26-bastion`.
+* The `esc` computer is not assigned exclusively to a student.
 * Your home directory will be wiped out and your `username` account will
   be disabled soon after the end of the School. Please make sure to save
   somewhere else what you want to keep.
@@ -110,7 +106,7 @@ Please note that:
 All the school hands-on material is included in a git repository. Get it using:
 
 ```shell
-[username@esc26-a100-1 ~]$ git clone {{ site.github.clone_url }}
+[username@esc26-01 ~]$ git clone {{ site.github.clone_url }}
 ```
 
 The repository contains also these pages.
@@ -120,28 +116,22 @@ The repository contains also these pages.
 Once logged into `esc`, verify that the environment is set up correctly:
 
 ```shell
-[username@esc26-a100-1 ~]$ gcc --version
-gcc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)
+[username@esc26-01 ~]$ gcc --version
+gcc (GCC) 14.3.1 20251022 (Red Hat 14.3.1-4)
 ...
-[username@esc26-a100-1 ~]$ gdb --version
-GNU gdb (AlmaLinux) 14.2-4.1.el9_6
+[username@esc26-01 ~]$ gdb --version
+GNU gdb (AlmaLinux) 16.3-3.1.el10_2
 ...
-[username@esc26-a100-1 ~]$ valgrind --version
-valgrind-3.24.0
-[username@esc26-a100-1 ~]$ scl enable gcc-toolset-14 -- gcc --version
-gcc (GCC) 14.2.1 20250110 (Red Hat 14.2.1-7)
+[username@esc26-01 ~]$ valgrind --version
+valgrind-3.26.0
+[username@esc26-01 ~]$ module load gcc-toolset-15
+[username@esc26-01 ~]$ gcc --version
+gcc (GCC) 15.2.1 20260123 (Red Hat 15.2.1-7)
 ...
 ```
 
-As you can see from the last command, beside the native compiler (gcc v. 11.5), there is also a more recent version (gcc v. 14.2), available through a so-called software collection.
+As you can see from the last command, beside the native compiler (gcc v. 14.3), there is also a more recent version (gcc v. 15.2), available through a so-called software collection.
 
-To always work with the more recent version, enable the toolset in a new shell:
-
-```shell
-[username@esc26-a100-1 ~]$ scl enable gcc-toolset-14 bash
-[username@esc26-a100-1 ~]$ gcc --version
-gcc (GCC) 14.2.1 20250110 (Red Hat 14.2.1-7)
-...
 ```
 
 ## Editing source code
