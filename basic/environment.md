@@ -67,40 +67,29 @@ Last login: ...
 
 To further simplify the login to `esc`, you can use an SSH key. You first need
 to create it (if you don't have one already), copy it remotely on
-and `esc` and set it in your SSH configuration.
+`esc` and set it in your SSH configuration.
 
 ```shell
 [me@mylaptop ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_esc
 Generating public/private rsa key pair.
 ...
-[me@mylaptop ~]$ ssh-copy-id -i ~/.ssh/id_rsa_student_esc escbastion
-/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/me/.ssh/id_rsa_student_esc.pub"
-...
-username@esc26-a100-1's password: 
-...
 [me@mylaptop ~]$ ssh-copy-id -i ~/.ssh/id_rsa_student_esc esc
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/me/.ssh/id_rsa_student_esc.pub"
 ...
-username@esc26-a100-1's password: 
+username@esc26.cloud.cnaf.infn.it's password: 
 ...
 [me@mylaptop ~]$ cat ~/.ssh/config
-Host escbastion
+Host esc
   Hostname esc26.cloud.cnaf.infn.it
   User username
   IdentityFile ~/.ssh/id_rsa_student_esc
-
-Host esc
-  Hostname esc26-a100-1
-  User username
-  IdentityFile ~/.ssh/id_rsa_student_esc
-  ProxyJump escbastion
 
 Host *
   ForwardX11 yes
   ForwardAgent yes
 [me@mylaptop ~]$ ssh esc
 Last login: ...
-[username@esc26-a100-1 ~]$ 
+[username@esc26-01 ~]$ 
 ```
 
 Your shell is [`bash`](https://www.gnu.org/s/bash).
