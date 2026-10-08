@@ -130,7 +130,7 @@ gcc (GCC) 15.2.1 20260123 (Red Hat 15.2.1-7)
 ...
 ```
 
-As you can see from the last command, beside the native compiler (gcc v. 14.3), there is also a more recent version (gcc v. 15.2), available through a so-called software collection.
+As you can see from the last command, beside the native compiler (gcc v. 14.3), there is also a more recent version (gcc v. 15.2), available through environment modules.
 
 
 ## Editing source code
