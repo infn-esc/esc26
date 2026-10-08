@@ -32,50 +32,41 @@ you should have received your personal credentials.
 You have been assigned a personal account to access computing resources
 hosted at INFN-CNAF. Credentials are that of your INFN AAI account.
 
-To log on the computers prepared for the School, you have to go first
-through the gateway host prepared for the school, named
-`esc26.cloud.cnaf.infn.it`, with your AAI username.
+To log on the computer prepared for the School, named
+`esc26.cloud.cnaf.infn.it`, please use your AAI username.
 
 ```shell
 [me@mylaptop ~]$ ssh username@esc26.cloud.cnaf.infn.it
 username@esc26.cloud.cnaf.infn.it's password:
 Last login: ...
-[username@esc26-bastion ~]$
+[username@esc26-01 ~]$
 ```
 
-From `esc26-bastion` you can then log onto the School computers. There
-are two servers available, named `esc26-a100-1` and `esc26-a100-2`. Both
-are equipped with two nVidia A100 40GB GPUs, 32 CPU cores and 266 GB of
+The available server is equipped with four nVidia H100 80GB GPUs, 192 CPU cores and 1.4 TB of
 RAM.
 
-The names of the machines can be tedious to type, but you can get around
+The name of the machine can be tedious to type, but you can get around
 it by creating a config file for ssh. With the ssh configuration **on
-your laptop** you can also avoid the explicit jump through the
-`esc26-bastion` host and forward the X11 display and the SSH agent.
+your laptop** you can also forward the X11 display and the SSH agent.
 
 ```shell
 [me@mylaptop ~]$ cat ~/.ssh/config
-Host escbastion
+Host esc  
   Hostname esc26.cloud.cnaf.infn.it
   User username
-
-Host esc
-  Hostname esc26-a100-1
-  User username
-  ProxyJump escbastion
 
 Host *
   ForwardX11 yes
   ForwardAgent yes
 
 [me@mylaptop ~]$ ssh esc
-username@esc26-a100-1's password:
+username@esc26.cloud.cnaf.infn.it's password:
 Last login: ...
-[username@esc26-a100-1 ~]$
+[username@esc26-01 ~]$
 ```
 
 To further simplify the login to `esc`, you can use an SSH key. You first need
-to create it (if you don't have one already), copy it remotely on both `esc26-bastion`
+to create it (if you don't have one already), copy it remotely on
 and `esc` and set it in your SSH configuration.
 
 ```shell
