@@ -47,17 +47,13 @@ RAM.
 
 The name of the machine can be tedious to type, but you can get around
 it by creating a config file for ssh. With the ssh configuration **on
-your laptop** you can also forward the X11 display and the SSH agent.
+your laptop**:
 
 ```shell
 [me@mylaptop ~]$ cat ~/.ssh/config
 Host esc  
   Hostname esc26.cloud.cnaf.infn.it
   User username
-
-Host *
-  ForwardX11 yes
-  ForwardAgent yes
 
 [me@mylaptop ~]$ ssh esc
 username@esc26.cloud.cnaf.infn.it's password:
@@ -70,8 +66,8 @@ to create it (if you don't have one already), copy it remotely on
 `esc` and set it in your SSH configuration.
 
 ```shell
-[me@mylaptop ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_esc
-Generating public/private rsa key pair.
+[me@mylaptop ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_esc -N ""
+Generating public/private ed25519 key pair.
 ...
 [me@mylaptop ~]$ ssh-copy-id -i ~/.ssh/id_rsa_student_esc esc
 /usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/me/.ssh/id_rsa_student_esc.pub"
@@ -84,9 +80,6 @@ Host esc
   User username
   IdentityFile ~/.ssh/id_rsa_student_esc
 
-Host *
-  ForwardX11 yes
-  ForwardAgent yes
 [me@mylaptop ~]$ ssh esc
 Last login: ...
 [username@esc26-01 ~]$ 
