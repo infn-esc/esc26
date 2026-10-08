@@ -130,10 +130,7 @@ As you can see from the last command, beside the native compiler (gcc v. 14.3), 
 
 ### Editing locally
 
-On `esc` you can find several editors available, such as `vim` and `emacs`. If
-the X display is available, graphical editors will open a window on your laptop;
-the network latency however may not be good enough to give you a fine
-experience. Just try.
+On `esc` you can find several editors available, such as `vim` and `emacs`.
 
 ### Editing remotely
 
