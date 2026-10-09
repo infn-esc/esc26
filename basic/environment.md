@@ -66,11 +66,11 @@ to create it (if you don't have one already), copy it remotely on
 `esc` and set it in your SSH configuration.
 
 ```shell
-[me@mylaptop ~]$ ssh-keygen -C username@esc -f ~/.ssh/id_rsa_student_esc -N ""
+[me@mylaptop ~]$ ssh-keygen -C username@esc -f ~/.ssh/student_esc -N ""
 Generating public/private ed25519 key pair.
 ...
-[me@mylaptop ~]$ ssh-copy-id -i ~/.ssh/id_rsa_student_esc esc
-/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/me/.ssh/id_rsa_student_esc.pub"
+[me@mylaptop ~]$ ssh-copy-id -i ~/.ssh/student_esc esc
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/me/.ssh/student_esc.pub"
 ...
 username@esc26.cloud.cnaf.infn.it's password: 
 ...
@@ -78,7 +78,7 @@ username@esc26.cloud.cnaf.infn.it's password:
 Host esc
   Hostname esc26.cloud.cnaf.infn.it
   User username
-  IdentityFile ~/.ssh/id_rsa_student_esc
+  IdentityFile ~/.ssh/student_esc
 
 [me@mylaptop ~]$ ssh esc
 Last login: ...
