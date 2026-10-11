@@ -160,8 +160,8 @@ your use of SSH to connect to `esc`, as described above.
 OpenMPI is installed on the nodes, but it is needed to add to the .bashrc the following exports:
 
 ```shell
-export PATH=$PATH:/usr/lib64/openmpi/bin/
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/openmpi/lib
+export PATH=$PATH:/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi/lib
 ```
 
 ## Environment configuration for TBB hands-on
