@@ -161,7 +161,9 @@ OpenMPI is installed on the nodes, but it is needed to add to the .bashrc the fo
 
 ```shell
 export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi/bin:$PATH
+export PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/compilers/bin:$PATH
 export LD_LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/comm_libs/13.0/hpcx/hpcx-2.25.1/ompi/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/nvidia/hpc_sdk/Linux_x86_64/25.11/compilers/lib:$LD_LIBRARY_PATH
 ```
 
 ## Environment configuration for TBB hands-on
