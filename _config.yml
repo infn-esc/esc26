@@ -34,6 +34,13 @@ menu:
       label: Using C++ in Python
     - name: py_to_cpp
       label: Using Python in C++
+  - name: gpu
+    label: GPU Programming
+    items:
+    - name: cuda
+      label: CUDA
+    - name: thrust
+      label: Thrust
 
 # Exclude from processing.
 # The following items will not be processed, by default.
