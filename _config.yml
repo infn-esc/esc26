@@ -27,6 +27,22 @@ menu:
       label: Return Value Optimization
     - name: compiletime
       label: Compile-time computation
+  - name: memory
+    label: Memory management
+    items:
+    - name: basics
+    - name: datastructure
+      label: Data structures
+    - name: allocator
+      label: Allocating memory
+    - name: asan
+      label: AddressSanitizer
+    - name: fs
+      label: False sharing
+    - name: am
+      label: Atomics and mutex
+    - name: perf
+      label: Profiling with perf
   - name: pybind
     label: Python bindings
     items:
