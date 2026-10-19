@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-  int numranks, rank, dest, source, rc, count, tag = 1;
+  int numranks, rank, dest, source, count, tag = 1;
   char inmsg, outmsg = 'x';
   MPI_Status Stat; // required variable for receive routines
   MPI_Init(&argc, &argv);
