@@ -114,10 +114,6 @@ All code lives under `/hands-on/gpu/cuda`.
 |  4   | Copy back `d_b → h_a`                                |
 |  5   | Free `d_a`, `d_b` with `cudaFreeAsync`               |
 
-```bash
-nvcc -std=c++20 memory_model.cu -o ex01
-./ex01   # prints “Exercise 1 – memory model: PASSED 🎉”
-```
 
 ### Variation
 
@@ -139,9 +135,6 @@ Add a non‑blocking version using **streams** + `cudaMemcpyAsync` and time a 10
 
 Compile & run:
 
-```bash
-nvcc -std=c++20 launch_kernel.cu -o ex02 && ./ex02
-```
 
 **Hint:** Global thread index = `blockIdx.x * blockDim.x + threadIdx.x`.
 
@@ -162,9 +155,6 @@ Matrix **M\[numRows × numCols]**.
 
 Compile:
 
-```bash
-nvcc -std=c++20 ex03_fill_matrix.cu -o ex03 && ./ex03
-```
 
 ---
 
