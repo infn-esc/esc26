@@ -57,6 +57,11 @@ menu:
       label: CUDA
     - name: thrust
       label: Thrust
+  - name: mpi
+    label: MPI Programming
+    items:
+    - name: MPIusage
+      label: Launching MPI Programs
 
 # Exclude from processing.
 # The following items will not be processed, by default.
