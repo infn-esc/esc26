@@ -194,7 +194,24 @@ nvcc -std=c++20 ex03_fill_matrix.cu -o ex03 && ./ex03
 * `dim3` defaults `z=1`; you almost never need a non‑unit Z for these labs.
 * For reductions, `blockDim.x` **must** be a power‑of‑two when you half the stride each step.
 
+---
 
+## Parallel Challenge – **The Circle of Life**
+
+A toroidal predator–prey world.  Build the starter **CPU version** first, then port to CUDA
+
+Reference CPU build:
+
+```bash
+make serial
+./circle_of_life --width 256 --height 256 --seed 42
+```
+
+Can you use the asynchronous GPU kernel launch to execute the generation of a git frame on the CPU while the GPU is running the next iteration?
+
+<img src="../hands-on/gpu/simulation.gif" alt="circleoflife" title="Circle of Life" width="500" height="500" />
+
+---
 
 The CUDA Runtime API reference manual is a very useful source of information:
 <a href="http://docs.nvidia.com/cuda/cuda-runtime-api/index.html" target="_blank">http://docs.nvidia.com/cuda/cuda-runtime-api/index.html</a>
