@@ -4,7 +4,6 @@
 // Fill in every line marked  ►►► TODO ◄◄◄.
 // When you can build and run the program without assertions, you’re done.
 //
-// Build:   nvcc -std=c++17 memory_model.cu -o ex01
 // ─────────────────────────────────────────────────────────────────────────────
 
 // C++ headers

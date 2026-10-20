@@ -6,7 +6,6 @@
 //       M[row, col] = row * numCols + col
 //   • Copy the matrix back to the host and verify the result.
 //
-// Build:   nvcc -std=c++20 ex03_fill_matrix.cu -o ex03
 // ─────────────────────────────────────────────────────────────────────────────
 //
 // Recommended naming conventions (used consistently across all exercises):
