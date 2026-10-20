@@ -1,2 +1,2 @@
-rank 0=esc25-a100-1 slot=pu0
-rank 1=esc25-a100-2 slot=pu16
+rank 0=esc26-01 slot=pu0
+rank 1=esc26-01 slot=pu16
