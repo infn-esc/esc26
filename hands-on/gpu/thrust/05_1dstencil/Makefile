@@ -1,3 +1,3 @@
 
 all:
-	nvcc --std=c++20 -I../../utils/deviceQuery --extended-lambda stencil.cu stencil.out
+	nvcc --std=c++20 -I../../utils/deviceQuery --extended-lambda stencil.cu -o stencil.out
